@@ -17,8 +17,14 @@ export default defineConfig([
   pluginPrettierRecommended,
   {
     rules: {
-      "prettier/prettier": "warn",
+      "prettier/prettier": [
+        "warn",
+        {
+          trailingComma: "es5",
+        },
+      ],
       "react/react-in-jsx-scope": "off",
+      "no-console": ["warn", { allow: ["error"] }],
     },
   },
 ]);
